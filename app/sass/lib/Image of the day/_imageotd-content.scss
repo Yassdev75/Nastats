@@ -1,0 +1,49 @@
+// ---- content style of the epic section ----
+.container-description-epic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-family: Din-bold;
+        text-transform: uppercase;
+    }
+    h6 {
+        color: gray;
+    }
+    tbody {
+        width: 100%;
+    }
+    th {
+        text-transform: uppercase;
+    }
+    tr {
+        height: 80px;
+        border-bottom: solid 1px gray;
+    }
+    td {
+        text-align: right;
+    }
+    #table-api {
+        width: 100%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #img-api {
+        padding-top: 40px;
+    }
+    .container-description-epic {
+        h1 {
+            padding: 25px;
+        }
+        h6 {
+            padding: 15px;
+        }
+        p {
+            padding: 0 15px 0 15px;
+        }
+        #table-api {
+            padding-bottom: 30px;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+// ---- Sliding button which invite you to scroll ----
+.btn-scroll {
+    position: absolute;
+    span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-bottom: solid 1px white;
+        border-right: solid 1px white;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin: -10px;
+        -webkit-animation: animate 2s infinite;
+        animation: animate 2s infinite;
+        span:nth-child(1) {
+            -webkit-animation-delay: -0.2s;
+            animation-delay: -0.2s;
+        }
+        span:nth-child(2) {
+            -webkit-animation-delay: -0.4s;
+            animation-delay: -0.4s;
+        }
+    }
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(45deg) translate(-20px, -20px);
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: rotate(45deg) translate(20px, 20px);
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}

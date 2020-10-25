@@ -1,0 +1,333 @@
+* {
+  color: white;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Din;
+}
+
+#home_page {
+  height: 100vh;
+  background-color: #000000;
+  background-size: cover;
+}
+
+#imageDay_page {
+  min-height: 150vh;
+  background-color: #000000;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+
+#home_page {
+  background-image: url("/assets/img/Background/dark_space-wallpaper-1920x1080.jpg");
+}
+
+#imageDay_page {
+  background-image: url("/assets/img/Background/planet-astronomy-outer-space-dark-black-background-5k-8k-2880x1800-1524.jpg");
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #imageDay_page {
+    overflow: auto;
+  }
+}
+@font-face {
+  font-family: "astro";
+  src: url("/assets/fonts/AstroSpace-eZ2Bg copie.ttf");
+}
+@font-face {
+  font-family: "Din-bold";
+  src: url("/assets/fonts/D-DIN-Bold copie.ttf");
+}
+@font-face {
+  font-family: "Din";
+  src: url("/assets/fonts/D-DIN copie.ttf");
+}
+.btn-scroll {
+  position: absolute;
+}
+.btn-scroll span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: solid 1px white;
+  border-right: solid 1px white;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin: -10px;
+  -webkit-animation: animate 2s infinite;
+  animation: animate 2s infinite;
+}
+.btn-scroll span span:nth-child(1) {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+.btn-scroll span span:nth-child(2) {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(-20px, -20px);
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(20px, 20px);
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-container img {
+  top: 25px;
+  left: 25px;
+}
+
+.navigation li {
+  display: inline-block;
+  margin: 8px;
+}
+.navigation a {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: Din-bold;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+.navigation a:hover {
+  color: #29e97e;
+  transition: 0.5s all ease;
+}
+
+.navigation a::after {
+  content: "";
+  background: #29e97e;
+  width: 0%;
+  height: 1px;
+  border-top: solid #29e97e 1px;
+  display: block;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.navigation a:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  display: none;
+}
+.hamburger:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  .navigation li {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.424);
+  }
+
+  .navigation.show {
+    display: flex;
+    transition: 1s all ease;
+  }
+
+  .hamburger {
+    display: inline-block;
+    margin: 12px;
+  }
+
+  .nav-section {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.banner {
+  height: 500px;
+}
+.banner h1 {
+  font-size: 70px;
+  font-family: Din-bold, Arial, Verdana, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.banner h1 span {
+  text-shadow: 0px 0px 4px #29e97e;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 50px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px !important;
+  }
+}
+.container_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container_btn #btn {
+  position: relative;
+  display: block;
+  color: white;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: solid 2px white;
+  margin: 30px 0;
+  padding: 50px 100px;
+  overflow: hidden;
+  transition: 1s all ease;
+  text-align: center;
+}
+.container_btn #btn::before {
+  background-color: #29e97f88;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  transition: all 0.8s ease;
+}
+.container_btn #btn::before {
+  width: 100%;
+  height: 0;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.container_btn #btn:hover::before {
+  height: 380%;
+}
+.container_btn #btn:hover {
+  color: white;
+  transition: 0.1s ease-in;
+  cursor: pointer;
+}
+
+.container-description-epic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-description-epic h1 {
+  font-family: Din-bold;
+  text-transform: uppercase;
+}
+.container-description-epic h6 {
+  color: gray;
+}
+.container-description-epic tbody {
+  width: 100%;
+}
+.container-description-epic th {
+  text-transform: uppercase;
+}
+.container-description-epic tr {
+  height: 80px;
+  border-bottom: solid 1px gray;
+}
+.container-description-epic td {
+  text-align: right;
+}
+.container-description-epic #table-api {
+  width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #img-api {
+    padding-top: 40px;
+  }
+
+  .container-description-epic h1 {
+    padding: 25px;
+  }
+  .container-description-epic h6 {
+    padding: 15px;
+  }
+  .container-description-epic p {
+    padding: 0 15px 0 15px;
+  }
+  .container-description-epic #table-api {
+    padding-bottom: 30px;
+  }
+}
+#imageDay_page #child1 {
+  position: absolute;
+  width: 100%;
+  height: 150vh;
+  opacity: 1;
+}
+#imageDay_page #child2 {
+  position: absolute;
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+}
+#imageDay_page .upper {
+  z-index: 1;
+  background-color: black;
+}
+#imageDay_page .low-opacity {
+  transition: 0.5s ease-in;
+  opacity: 0 !important;
+}
+#imageDay_page .display-none {
+  display: none;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #child1 {
+    overflow: auto;
+  }
+
+  #child2 {
+    overflow: auto;
+  }
+}
+footer {
+  background-color: #0f0f0f;
+}
+footer .container div {
+  height: 100%;
+}
+footer p {
+  text-align: center;
+  margin: 0;
+}
+footer img {
+  width: 25%;
+  height: 25%;
+}
+
+/*# sourceMappingURL=style.css.map */

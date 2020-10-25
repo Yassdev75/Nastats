@@ -1,0 +1,78 @@
+// ---- Navigation with the Logo and the nav menu ----
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    img {
+        top: 25px;
+        left: 25px;
+    }
+}
+
+.navigation {
+    li {
+        display: inline-block;
+        margin: 8px;
+    }
+    a {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-family: Din-bold;
+        text-decoration: none;
+        color: white;
+        letter-spacing: 1px;
+        -webkit-transition: 1s all ease;
+        transition: 1s all ease;
+        &:hover {
+            color: $test;
+            transition: 0.5s all ease;
+        }
+    }
+}
+
+.navigation a::after {
+    content: '';
+    background: $test;
+    width: 0%;
+    height: 1px;
+    border-top: solid $test 1px;
+    display: block;
+    -webkit-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    display: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    .navigation li {
+        border-bottom: solid 1px rgba(255, 255, 255, 0.424);
+    }
+    .navigation.show {
+        display: flex;
+        transition: 1s all ease;
+    }
+    .hamburger {
+        display: inline-block;
+        margin: 12px;
+    }
+    .nav-section {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

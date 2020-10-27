@@ -39,7 +39,7 @@ function useApi(data) {
     document.querySelector("#table-api").innerHTML +=
         `<h1>${title}</h1>
     <h6>${subtitle}</h6>
-    <p>${corpus}</p>
+    <p class="w-75">${corpus}</p>
     <table class="w-75">
         <tbody>
             <tr>

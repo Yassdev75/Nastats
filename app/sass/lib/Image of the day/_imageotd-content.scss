@@ -33,6 +33,7 @@
         padding-top: 40px;
     }
     .container-description-epic {
+        background-color: black;
         h1 {
             padding: 25px;
         }
@@ -41,6 +42,11 @@
         }
         p {
             padding: 0 15px 0 15px;
+            margin: auto;
+        }
+        table {
+            margin: auto;
+            margin-top: 18px;
         }
         #table-api {
             padding-bottom: 30px;

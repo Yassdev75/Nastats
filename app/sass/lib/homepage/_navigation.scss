@@ -3,8 +3,13 @@
     display: flex;
     flex-wrap: wrap;
     img {
-        top: 25px;
-        left: 25px;
+        position: relative;
+        top: 25%;
+        left: 5%;
+    }
+    nav {
+        position: relative;
+        top: 20%;
     }
 }
 
@@ -23,7 +28,7 @@
         -webkit-transition: 1s all ease;
         transition: 1s all ease;
         &:hover {
-            color: $test;
+            color: $primary;
             transition: 0.5s all ease;
         }
     }
@@ -31,10 +36,10 @@
 
 .navigation a::after {
     content: '';
-    background: $test;
+    background: $primary;
     width: 0%;
     height: 1px;
-    border-top: solid $test 1px;
+    border-top: solid $primary 1px;
     display: block;
     -webkit-transition: 0.3s all ease;
     transition: 0.3s all ease;

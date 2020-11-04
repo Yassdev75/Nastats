@@ -2,13 +2,13 @@
     #child1 {
         position: absolute;
         width: 100%;
-        height: 150vh;
+        height: 100%;
         opacity: 1;
     }
     #child2 {
         position: absolute;
         width: 100%;
-        height: 150vh;
+        height: 100%;
         display: flex;
         justify-content: center;
         opacity: 1;
@@ -28,9 +28,6 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    #child1 {
-        overflow: auto;
-    }
     #child2 {
         overflow: auto;
     }

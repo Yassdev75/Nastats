@@ -19,12 +19,7 @@ function lowOpacity() {
 async function getApi() {
     let apiKey = "f5oRMiVGZ9rWbjcjmxWkOFanJ0bTORX63pEubMrJ";
     let response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`);
-    // let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${apiKey}`);
-    // let response = await fetch(`https://api.nasa.gov/EPIC/api/natural/images?api_key=${apiKey}`);
-    console.log(response);
     let data = await response.json();
-    // console.log(data.photos[0].img_src);
-    console.log(data);
     useApi(data);
 }
 
@@ -36,8 +31,7 @@ function useApi(data) {
     date = data.date;
     imgSrc = data.url;
     document.querySelector("#img-api").innerHTML += `<img class="img-fluid" style="width:300px; height:300px;" src="${imgSrc}">`;
-    document.querySelector("#table-api").innerHTML +=
-        `<h1>${title}</h1>
+    document.querySelector("#table-api").innerHTML += `<h1>${title}</h1>
     <h6>${subtitle}</h6>
     <p class="w-75">${corpus}</p>
     <table class="w-75">
@@ -53,3 +47,12 @@ function useApi(data) {
          </tbody>
      </table>`
 };
+
+async function getApiMars() {
+    let apiKey = "f5oRMiVGZ9rWbjcjmxWkOFanJ0bTORX63pEubMrJ";
+    let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${apiKey}`);
+    console.log(response);
+    let data = await response.json();
+    console.log(data);
+    useApi(data);
+}

@@ -9,19 +9,12 @@ body {
   font-family: Din;
 }
 
-#home_page {
-  height: 100vh;
+#home_page,
+#imageDay_page,
+#orbital_launches {
+  min-height: 100vh;
   background-color: #000000;
   background-size: cover;
-}
-
-#imageDay_page {
-  min-height: 150vh;
-  background-color: #000000;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  overflow: auto;
 }
 
 #home_page {
@@ -32,11 +25,10 @@ body {
   background-image: url("./assets/img/Background/planet-astronomy-outer-space-dark-black-background-5k-8k-2880x1800-1524.jpg");
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  #imageDay_page {
-    overflow: auto;
-  }
+#orbital_launches {
+  background-image: url("./assets/img/Background/mars.jpg");
 }
+
 @font-face {
   font-family: "astro";
   src: url("./assets/fonts/AstroSpace-eZ2Bg copie.ttf");
@@ -93,8 +85,13 @@ body {
   flex-wrap: wrap;
 }
 .nav-container img {
-  top: 25px;
-  left: 25px;
+  position: relative;
+  top: 25%;
+  left: 5%;
+}
+.nav-container nav {
+  position: relative;
+  top: 20%;
 }
 
 .navigation li {
@@ -267,6 +264,9 @@ body {
     padding-top: 40px;
   }
 
+  .container-description-epic {
+    background-color: black;
+  }
   .container-description-epic h1 {
     padding: 25px;
   }
@@ -275,6 +275,11 @@ body {
   }
   .container-description-epic p {
     padding: 0 15px 0 15px;
+    margin: auto;
+  }
+  .container-description-epic table {
+    margin: auto;
+    margin-top: 18px;
   }
   .container-description-epic #table-api {
     padding-bottom: 30px;
@@ -283,13 +288,13 @@ body {
 #imageDay_page #child1 {
   position: absolute;
   width: 100%;
-  height: 150vh;
+  height: 100%;
   opacity: 1;
 }
 #imageDay_page #child2 {
   position: absolute;
   width: 100%;
-  height: 150vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   opacity: 1;
@@ -307,16 +312,38 @@ body {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  #child1 {
-    overflow: auto;
-  }
-
   #child2 {
     overflow: auto;
   }
 }
+.stats {
+  height: 600px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+.stats .container-stats {
+  height: 100%;
+}
+.stats .container-stats h3,
+.stats .container-stats p {
+  width: 100%;
+  height: 50%;
+  margin: 30px 0 0 0;
+}
+.stats .container-stats h3 {
+  font-size: 4.5rem;
+}
+.stats .container-stats p {
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  color: #29e97e;
+}
+
 footer {
-  background-color: #0f0f0f;
+  background-color: black;
 }
 footer .container div {
   height: 100%;

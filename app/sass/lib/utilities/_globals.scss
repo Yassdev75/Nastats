@@ -10,21 +10,22 @@ body {
     font-family: Din;
 }
 
-#home_page {
-    height: 100vh;
+#home_page,
+#imageDay_page,
+#orbital_launches {
+    min-height: 100vh;
     background-color: #000000;
     background-size: cover;
 }
 
-#imageDay_page {
-    min-height: 150vh;
-    background-color: #000000;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    overflow: auto;
-}
-
+// #imageDay_page {
+//     min-height: 150vh;
+//     background-color: #000000;
+//     background-size: cover;
+//     display: flex;
+//     align-items: center;
+//     overflow: auto;
+// }
 #home_page {
     background-image: url("./assets/img/Background/dark_space-wallpaper-1920x1080.jpg");
 }
@@ -33,8 +34,12 @@ body {
     background-image: url("./assets/img/Background/planet-astronomy-outer-space-dark-black-background-5k-8k-2880x1800-1524.jpg");
 }
 
+#orbital_launches {
+    background-image: url("./assets/img/Background/mars.jpg");
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
-    #imageDay_page {
-        overflow: auto;
-    }
+    // #imageDay_page {
+    //     // overflow: auto;
+    // }
 }

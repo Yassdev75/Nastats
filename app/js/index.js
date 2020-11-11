@@ -15,15 +15,16 @@ function lowOpacity() {
     }, 500);
 };
 
+// Recovering the image of the day with the api key of NASA
 
-async function getApi() {
+async function getApiImage() {
     let apiKey = "f5oRMiVGZ9rWbjcjmxWkOFanJ0bTORX63pEubMrJ";
     let response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`);
     let data = await response.json();
-    useApi(data);
+    useApiImage(data);
 }
 
-function useApi(data) {
+function useApiImage(data) {
     title = data.title;
     subtitle = data.copyright;
     corpus = data.explanation;
@@ -48,11 +49,31 @@ function useApi(data) {
      </table>`
 };
 
-async function getApiMars() {
+// Recovering the asteroids near to earth with the api key of NASA
+
+async function getApiAsteroid() {
+    let d = new Date();
+    let month = (d.getMonth()) + 1;
+    let day = d.getDate();
+    let year = d.getFullYear();
+    var date = `${year}-${day}-${month}`;
     let apiKey = "f5oRMiVGZ9rWbjcjmxWkOFanJ0bTORX63pEubMrJ";
-    let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${apiKey}`);
-    console.log(response);
+    let response = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${date}&end_date=${date}&api_key=${apiKey}`);
     let data = await response.json();
     console.log(data);
-    useApi(data);
+    useApiAsteroid(data);
+}
+
+function useApiAsteroid({ element_count, near_earth_objects }) {
+    Object.keys(near_earth_objects).map(date => {
+            near_earth_objects[date].map(asteroid => {
+                const id = asteroid.id;
+                const name = asteroid.name;
+                const dangerous = asteroid.is_potentially_hazardous_asteroid;
+                const magnitude = asteroid.absolute_magnitude_h;
+
+                console.log(id, name, dangerous, magnitude);
+            })
+        })
+        // document.querySelector("#display-infos").innerHTML += `<p>${asteroid}</p>`;
 }

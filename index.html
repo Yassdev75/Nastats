@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="getApiImage(); getApiAsteroid()">
     <!-- Homepage -->
     <div id="home_page">
         <!-- Navigation -->
@@ -32,7 +32,7 @@
                             <a href="#stats-launch">Orbital launches</a>
                         </li>
                         <li>
-                            <a href="#">Missions</a>
+                            <a href="#mars-gallery">Asteroids near to earth</a>
                         </li>
                     </ul>
                 </nav>
@@ -72,7 +72,7 @@
     <div id="imageDay_page">
         <div id="child1" class="upper">
             <div class="container container_btn h-100 d-flex justify-content-center align-items-center">
-                <a onclick="lowOpacity(); getApi()" id="btn">Image of the day</a>
+                <a onclick="lowOpacity();" id="btn">Image of the day</a>
             </div>
         </div>
         <div id="child2" class="container-fluid">
@@ -88,7 +88,7 @@
     </div>
     <!-- Fin Image of the day -->
 
-    <!-- Debut stats -->
+    <!-- Debut Orbital launches -->
     <div id="stats-launch" class="stats row">
         <div class="col-4 container-stats">
             <h3 class="num d-flex justify-content-center align-items-end">85</h3>
@@ -103,14 +103,13 @@
             <p class="d-flex justify-content-center">Failures</p>
         </div>
     </div>
-    <!-- Fin stats -->
-
-    <!-- Orbital launches -->
-    <div id="orbital_launches" class="d-flex justify-content-center">
-        <button onclick="getApiMars()" style="color: black; height: 40px;">akeaaoe</button>
-        <button onclick="getApiMars()">eaoiioeijoae</button>
-    </div>
     <!-- Fin Orbital launches -->
+
+    <!-- Debut Mars Images -->
+    <div id="mars-gallery" class="d-flex d-flex justify-content-center align-items-center">
+        <div id="display-infos"></div>
+    </div>
+    <!-- Fin Mars Images -->
 
     <!-- Footer -->
     <footer>

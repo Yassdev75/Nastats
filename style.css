@@ -11,7 +11,7 @@ body {
 
 #home_page,
 #imageDay_page,
-#orbital_launches {
+#mars-gallery {
   min-height: 100vh;
   background-color: #000000;
   background-size: cover;
@@ -25,7 +25,7 @@ body {
   background-image: url("./assets/img/Background/planet-astronomy-outer-space-dark-black-background-5k-8k-2880x1800-1524.jpg");
 }
 
-#orbital_launches {
+#mars-gallery {
   background-image: url("./assets/img/Background/mars.jpg");
 }
 
@@ -340,6 +340,11 @@ body {
   font-size: 2rem;
   text-align: center;
   color: #29e97e;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 footer {

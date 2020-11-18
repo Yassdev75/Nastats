@@ -38,7 +38,7 @@ function useApiImage(data) {
     <table class="w-75">
         <tbody>
             <tr>
-             <th>Type du contenu</th>
+             <th>Content type</th>
                <td>${media}</td>
              </tr>
              <tr>
@@ -57,6 +57,7 @@ async function getApiAsteroid() {
     let day = d.getDate();
     let year = d.getFullYear();
     var date = `${year}-${day}-${month}`;
+    console.log(date);
     let apiKey = "f5oRMiVGZ9rWbjcjmxWkOFanJ0bTORX63pEubMrJ";
     let response = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${date}&end_date=${date}&api_key=${apiKey}`);
     let data = await response.json();
@@ -65,15 +66,19 @@ async function getApiAsteroid() {
 }
 
 function useApiAsteroid({ element_count, near_earth_objects }) {
+    document.querySelector("#numbers-object").innerHTML += `<span>${element_count}</span>`;
     Object.keys(near_earth_objects).map(date => {
-            near_earth_objects[date].map(asteroid => {
-                const id = asteroid.id;
-                const name = asteroid.name;
-                const dangerous = asteroid.is_potentially_hazardous_asteroid;
-                const magnitude = asteroid.absolute_magnitude_h;
+        near_earth_objects[date].map(asteroid => {
+            const id = asteroid.id;
+            const name = asteroid.name;
+            const dangerous = asteroid.is_potentially_hazardous_asteroid;
+            const magnitude = asteroid.absolute_magnitude_h;
 
-                console.log(id, name, dangerous, magnitude);
-            })
+            console.log(id, name, dangerous, magnitude);
+            document.querySelector("#name-object").innerHTML += `<span>${name}</span>`;
+            // <div id="display-infos" class="container"></div> a remettre dans le html
+
+
         })
-        // document.querySelector("#display-infos").innerHTML += `<p>${asteroid}</p>`;
+    })
 }

@@ -11,9 +11,14 @@ body {
 }
 
 #home_page,
-#imageDay_page,
-#mars-gallery {
-    min-height: 100vh;
+#imageDay_page {
+    height: 100vh;
+    background-color: #000000;
+    background-size: cover;
+}
+
+#asteroids {
+    height: 100vh;
     background-color: #000000;
     background-size: cover;
 }
@@ -34,7 +39,7 @@ body {
     background-image: url("./assets/img/Background/planet-astronomy-outer-space-dark-black-background-5k-8k-2880x1800-1524.jpg");
 }
 
-#mars-gallery {
+#asteroids {
     background-image: url("./assets/img/Background/mars.jpg");
 }
 

@@ -23,3 +23,11 @@
         }
     }
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .container-stats {
+        p {
+            font-size: 0.9rem !important;
+        }
+    }
+}

@@ -32,7 +32,7 @@
                             <a href="#stats-launch">Orbital launches</a>
                         </li>
                         <li>
-                            <a href="#mars-gallery">Asteroids near to earth</a>
+                            <a href="#asteroids">Asteroids near to earth</a>
                         </li>
                     </ul>
                 </nav>
@@ -72,7 +72,7 @@
     <div id="imageDay_page">
         <div id="child1" class="upper">
             <div class="container container_btn h-100 d-flex justify-content-center align-items-center">
-                <a onclick="lowOpacity();" id="btn">Image of the day</a>
+                <a onclick="lowOpacity();" id="btn">Discover the Image of the day</a>
             </div>
         </div>
         <div id="child2" class="container-fluid">
@@ -105,11 +105,60 @@
     </div>
     <!-- Fin Orbital launches -->
 
-    <!-- Debut Mars Images -->
-    <div id="mars-gallery" class="d-flex d-flex justify-content-center align-items-center">
-        <div id="display-infos"></div>
+    <!-- Debut Asteroids -->
+
+
+    <!-- <div id="asteroids">
+        <div class="container h-100">
+            <h2 class="text-center asteroids-title mb-5">Asteroids near to earth Today</h2>
+            <p class="text-center">
+                Thanks to the API provided by nasa, we can know how many asteroids pass close to the earth, but also know several other useful information about these asteroids. This is what I present to you below
+            </p>
+            <div class="container h-50 row">
+                <div class="col-4 bg-primary"></div>
+                <div class="col-4 bg-secondary"></div>
+                <div class="col-4 bg-primary"></div>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="asteroids">
+        <div class="container h-100">
+            <div class="w-100 h-25">
+                <h2 class="asteroids-title text-center mb-5 pt-5">Asteroids near to earth Today</h2>
+                <p class="text-center asteroids-description">
+                    Thanks to the API provided by nasa, we can know how many asteroids pass close to the earth, but also know several other useful information about these asteroids. This is what I present to you below
+                </p>
+
+            </div>
+            <div class="container h-75 list-container d-flex align-items-center">
+                <ul>
+                    <li>
+                        <p class="text-center">
+                            Numbers of asteroids close to earth today: <span class="ml-5" id="numbers-object"></span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-center">
+                            Code of the Asteroids: <span class="ml-5" id="name-object"></span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-center">
+                            Numbers of asteroids close to earth today: <span class="ml-5" id="numbers-object"></span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-center">
+                            Numbers of asteroids close to earth today: <span class="ml-5" id="numbers-object"></span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <!-- Fin Mars Images -->
+
+    <!-- Fin Asteroids -->
 
     <!-- Footer -->
     <footer>

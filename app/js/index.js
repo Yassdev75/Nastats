@@ -56,12 +56,11 @@ async function getApiAsteroid() {
     let month = (d.getMonth()) + 1;
     let day = d.getDate();
     let year = d.getFullYear();
-    var date = `${year}-${day}-${month}`;
-    console.log(date);
+    var date = `${year}-${month}-${day}`;
     let apiKey = "f5oRMiVGZ9rWbjcjmxWkOFanJ0bTORX63pEubMrJ";
     let response = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${date}&end_date=${date}&api_key=${apiKey}`);
     let data = await response.json();
-    console.log(data);
+    // console.log(data);
     useApiAsteroid(data);
 }
 
@@ -69,16 +68,19 @@ function useApiAsteroid({ element_count, near_earth_objects }) {
     document.querySelector("#numbers-object").innerHTML += `<span>${element_count}</span>`;
     Object.keys(near_earth_objects).map(date => {
         near_earth_objects[date].map(asteroid => {
-            const id = asteroid.id;
+
+            // const id = asteroid.id;
             const name = asteroid.name;
             const dangerous = asteroid.is_potentially_hazardous_asteroid;
             const magnitude = asteroid.absolute_magnitude_h;
+            const min = asteroid.estimated_diameter.meters.estimated_diameter_min;
+            const max = asteroid.estimated_diameter.meters.estimated_diameter_max;
 
-            console.log(id, name, dangerous, magnitude);
-            document.querySelector("#name-object").innerHTML += `<span>${name}</span>`;
-            // <div id="display-infos" class="container"></div> a remettre dans le html
-
-
+            document.querySelector("#names-object").innerHTML += `<p class="content-object">${name}<br></p>`;
+            document.querySelector("#dangerous-object").innerHTML += `<p class="content-object">${dangerous}<br></p>`;
+            document.querySelector("#magnitude-object").innerHTML += `<p class="content-object">${magnitude}<br></p>`;
+            document.querySelector("#minimum-object").innerHTML += `<p class="content-object">${min}<br></p>`;
+            document.querySelector("#maximum-object").innerHTML += `<p class="content-object">${max}<br></p>`;
         })
     })
 }

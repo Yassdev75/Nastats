@@ -17,7 +17,7 @@ body {
 }
 
 #asteroids {
-  height: 100vh;
+  height: 150vh;
   background-color: #000000;
   background-size: cover;
 }
@@ -359,20 +359,48 @@ body {
 
 .asteroids-description {
   text-shadow: 0px 0px 4px #29e97e;
+  font-size: 1.3em;
 }
 
-.list-container ul {
-  list-style: none;
+#table {
+  width: 600px;
+  height: 400px;
+  background-color: green;
+  border: solid 1px white;
 }
-.list-container li {
-  background-color: #1fb161;
-  border: solid 1px #10773e;
-}
-.list-container p {
-  font-size: 2.4em;
+#table .title-object {
   text-transform: uppercase;
+}
+#table .title-object td {
+  text-transform: uppercase;
+  padding: 6px;
+}
+#table tr {
+  padding: 0 !important;
+}
+#table tr th {
+  padding: 0 !important;
+  text-align: center;
+  border-bottom: solid 1px white;
+}
+#table tr td {
+  border: solid 1px white;
+  text-align: center;
+  padding: 0;
+}
+#table tr td span {
+  margin: 0 !important;
+}
+#table tr td span .content-object {
+  width: 100%;
+  height: 52px;
+  border-bottom: solid 1px white;
+  border-top: solid 1px white;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {

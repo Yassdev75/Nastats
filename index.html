@@ -127,33 +127,41 @@
             <div class="w-100 h-25">
                 <h2 class="asteroids-title text-center mb-5 pt-5">Asteroids near to earth Today</h2>
                 <p class="text-center asteroids-description">
-                    Thanks to the API provided by nasa, we can know how many asteroids pass close to the earth, but also know several other useful information about these asteroids. This is what I present to you below
+                    Thanks to the API provided by nasa, we can know how many asteroids pass close to the earth, but also know several other useful information about these asteroids. You will find some of this information that I have collected and put in a table below
                 </p>
 
             </div>
-            <div class="container h-75 list-container d-flex align-items-center">
-                <ul>
-                    <li>
-                        <p class="text-center">
-                            Numbers of asteroids close to earth today: <span class="ml-5" id="numbers-object"></span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="text-center">
-                            Code of the Asteroids: <span class="ml-5" id="name-object"></span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="text-center">
-                            Numbers of asteroids close to earth today: <span class="ml-5" id="numbers-object"></span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="text-center">
-                            Numbers of asteroids close to earth today: <span class="ml-5" id="numbers-object"></span>
-                        </p>
-                    </li>
-                </ul>
+            <div class="container h-75 list-container d-flex align-items-center justify-content-center">
+                <table class="w-100" id="table">
+                    <tbody>
+                        <tr class="title-object">
+                            <th>Number of asteroids close to earth today</th>
+                            <td>Names of asteroids</td>
+                            <td>Dangerousness</td>
+                            <td>Magnitude</td>
+                            <td>Minimum Diameters of asteroid</td>
+                            <td>Maximum Diameters of asteroid</td>
+                        </tr>
+                        <tr>
+                            <th><span id="numbers-object"></span></th>
+                            <td><span id="names-object"></span></td>
+                            <td><span id="dangerous-object"></span></td>
+                            <td><span id="magnitude-object"></span></td>
+                            <td><span id="minimum-object"></span></td>
+                            <td><span id="maximum-object"></span></td>
+                        </tr>
+                        <!-- <tr>
+                            <th>Date</th>
+                            <td>${dangerous}</td>
+                        </tr>
+                        <tr>
+                            <th>Date</th>
+                            <td>${magnitude}</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+
+
             </div>
         </div>
     </div>

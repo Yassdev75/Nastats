@@ -366,7 +366,7 @@ body {
   width: 600px;
   height: 400px;
   background-color: green;
-  border: solid 1px white;
+  border: solid 2px white;
 }
 #table .title-object {
   text-transform: uppercase;
@@ -394,7 +394,6 @@ body {
 #table tr td span .content-object {
   width: 100%;
   height: 52px;
-  border-bottom: solid 1px white;
   border-top: solid 1px white;
   margin: 0;
   padding: 0;
